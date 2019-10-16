@@ -1,0 +1,45 @@
+.parser-content {
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+task .line {
+  padding: 15px 0;
+}
+task li.line {
+  border-bottom: 1px solid $light-grey;
+}
+
+.option-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 21px;
+
+  .option-label {
+    width: 200px;
+  }
+
+  .option-value {
+    font-size: 16px;
+    &:focus::-webkit-input-placeholder { color:transparent; }
+    &:focus:-moz-placeholder { color:transparent; }
+    &:focus::-moz-placeholder { color:transparent; }
+    &:focus:-ms-input-placeholder { color:transparent; }
+  }
+}
+.loading {
+  text-align: center;
+}
+tasks .section-heading {
+  @extend .noselect;
+  font-family: $type-bold;
+  font-size: 16px;
+  color: $dark-grey;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid $light-grey;
+  transition: color 0s;
+}
+

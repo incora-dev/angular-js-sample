@@ -1,0 +1,25 @@
+<form class="parser-content" name="form" novalidate>
+  <div class="option-row">
+    <span class="option-label">Company:</span>
+    <input class="form-control option-value" required ng-model="companyName">
+  </div>
+  <div class="option-row">
+    <span class="option-label">Location:</span>
+    <input class="form-control option-value" ng-model="location" placeholder="Type city or state">
+  </div>
+  <div class="action button-row-align-right">
+    <button
+      class="button primary save-button"
+      ng-disabled="!form.$valid || (task.status === 1 && !isTimeoutReached)"
+      ng-click="runParser()"
+    >
+      Submit
+    </button>
+  </div>
+</form>
+<div class="loading">
+  <loading-indicator ng-if="task.status === 1 && !isTimeoutReached" size="icon" for-use-on-non-white-background="::true"></loading-indicator>
+</div>
+<task task="task" ng-if="task.status === 2 || isTimeoutReached" show-vacancies="true"/>
+<tasks tasks="tasks" />
+
